@@ -1,0 +1,26 @@
+{
+  "description": "Block websites that waste your times",
+  "manifest_version": 2,
+  "name": "Anti-Procrastinator",
+  "version": "0.0.1",
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon-32.png",
+    "default_title": "Anti-Procrastinator · Settings",
+    "default_popup": "popup/settings.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "TODO"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["deprocrastinate.js"]
+    }
+  ],
+  "permissions": ["activeTab", "storage"]
+}

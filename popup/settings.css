@@ -1,0 +1,72 @@
+body {
+  background: #e1f2f7;
+  --radius: 0.125rem;
+  --width: 300px;
+  --padding: 0.5rem;
+  --box-shadow: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  width: var(--width);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  width: 100%;
+  margin: 0 0 0.25rem;
+  padding: 0;
+  list-style-type: none;
+}
+
+input {
+  width: 100%;
+  padding: var(--padding);
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  outline: none;
+  box-shadow: var(--box-shadow);
+}
+
+input:focus {
+  --box-shadow: 0 0 0 2px #e5bace;
+}
+
+button {
+  --box-shadow: 0 0.25rem 0 0 #d50819;
+
+  width: var(--width);
+  margin-top: 0.25rem;
+  padding: var(--padding);
+  background: #ef0d50;
+  color: #fff;
+  border: solid 1px #ef0d50;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+}
+
+button:hover,
+button:focus {
+  --box-shadow: 0 0.375rem 0 -1px #d50819;
+  transform: translateY(-0.125rem) scale(1.01);
+}
+
+button:focus-visible {
+  --box-shadow: 0 0 0 2px #e5bace, 0 0.375rem 0 -1px #d50819;
+}
+
+button:active {
+  --box-shadow: 0 -0.25rem 0 0 #d50819;
+  border: solid 1px #d50819;
+  transform: translateY(0.25rem);
+  filter: saturate(0.9);
+}
